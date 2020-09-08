@@ -35,6 +35,7 @@ def send():
         state = request.form["State"]
         gender = request.form["Gender"]
         Discovery = request.form["Discovery"]
+        Score = request.form["Score"]
 
         game_df = pd.DataFrame({
             'Username': [Username],
@@ -42,7 +43,8 @@ def send():
             'City': [city],
             'State': [state],
             'Gender': [gender],
-            'Discovery': [Discovery]
+            'Discovery': [Discovery],
+            'Score' : [Score]
         })
 
         game_df.to_sql('game', con=conn, if_exists='append', index=False)
