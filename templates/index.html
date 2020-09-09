@@ -44,12 +44,16 @@
         <script src= "{{ url_for('static',filename='vendor/jquery/dist/jquery.min.js') }}"></script>
         <!-- Preloader -->
         <script src="{{ url_for('static',filename='js/preloader.min.js') }}"></script>
+        <script src= "{{ url_for('static',filename='js/shared.loader.js') }}"></script>
+        <script src= "{{ url_for('static',filename='js/shared.data.gz') }}"></script>
+        <script src= "{{ url_for('static',filename='js/shared.framework.js.gz') }}"></script>
+        <script src= "{{ url_for('static',filename='js/shared.wasm.gz') }}"></script>
     </head>
     <body>
         <!-- Preloader -->
         <div class="mpl-preloader">
             <div class="mpl-preloader-content">
-                <div class="mpl-preloader-title display-1 h1">5 & Alive</div>
+                <div class="mpl-preloader-title display-1 h1">5&Alive</div>
                 <div class="mpl-preloader-progress">
                     <div></div>
                 </div>
@@ -92,16 +96,16 @@
                 <div id="unity-footer">
                   <div id="unity-webgl-logo"></div>
                   <div id="unity-fullscreen-button"></div>
-                  <div id="unity-build-title">5&Alive</div>
+                  <div id="unity-build-title"><b>Song Credit:</b> Andrey Vinogradov</div>
                 </div>
               </div>
                 <script>
                   var buildUrl = "Build";
-                  var loaderUrl = buildUrl + "/shared.loader.js";
+                  var loaderUrl = buildUrl + "shared.loader.js";
                   var config = {
-                    dataUrl: buildUrl + "/shared.data.gz",
-                    frameworkUrl: buildUrl + "/shared.framework.js.gz",
-                    codeUrl: buildUrl + "/shared.wasm.gz",
+                    dataUrl: buildUrl + "shared.data.gz",
+                    frameworkUrl: buildUrl + "shared.framework.js.gz",
+                    codeUrl: buildUrl + "shared.wasm.gz",
                     streamingAssetsUrl: "StreamingAssets",
                     companyName: "test",
                     productName: "Mario3D",
