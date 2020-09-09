@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!--
+    Name: MonsterPlay - eSports and Gaming HTML Template
+    Version: 1.0.2
+    Author: nK
+    Website: https://nkdev.info/
+    Purchase: https://themeforest.net/user/_nk/portfolio
+    Support: https://nk.ticksy.com/
+    License: You must have a valid license purchased only from ThemeForest (the above link) in order to legally use the theme for your project.
+    Copyright 2020.
+-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>5 & Alive</title>
+        <meta name="description" content="MonsterPlay - Superpower for Gaming Websites">
+        <meta name="keywords" content="gaming, game, esports, community, template, html, bootstrap, webpack">
+        <meta name="author" content="nK">
+        <link rel="icon" type="image/png" href="mario.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- START: Styles -->
+        <!-- Adobe Fonts -->
+        <link rel="stylesheet" href="https://use.typekit.net/vgd1cli.css">
+        <!-- Bootstrap -->
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/bootstrap.min.css') }}"/>
+        <!-- Swiper -->
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='vendor/swiper/css/swiper.min.css') }}"/>
+        <!-- Fancybox -->
+        <link rel="stylesheet" href="{{ url_for('static',filename='vendor/fancybox/dist/jquery.fancybox.min.css') }}" />
+        <!-- Revolution Slider -->
+        <link rel="stylesheet" href="{{ url_for('static',filename='vendor/slider-revolution/css/settings.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('static',filename='vendor/slider-revolution/css/layers.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('static',filename='vendor/slider-revolution/css/navigation.css') }}" />
+        <!-- MonsterPlay -->
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/monsterplay.css') }}">
+        <!-- RTL (uncomment this to enable RTL support) -->
+        <!-- <link rel="stylesheet" href="assets/css/monsterplay-rtl.min.css" /> -->
+        <!-- Custom Styles -->
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/custom.css') }}"> 
+        <link rel="shortcut icon" href="{{ url_for('static',filename='TemplateData/favicon.ico') }}">
+        <!-- END: Styles -->
+        <!-- jQuery -->
+        <script src= "{{ url_for('static',filename='vendor/jquery/dist/jquery.min.js') }}"></script>
+                <!-- Preloader -->
+        <script src="{{ url_for('static',filename='js/preloader.min.js') }}"></script>
+        <script src= "{{ url_for('static',filename='js/shared.loader.js') }}"></script>
+        <!--<script src= "{{ url_for('static',filename='js/shared.data.gz') }}"></script>
+        <script src= "{{ url_for('static',filename='js/shared.framework.js.gz') }}"></script>
+        <script src= "{{ url_for('static',filename='js/shared.wasm.gz') }}"></script>
+        -->
+    </head>
+    <body>
+        <!-- Preloader -->
+        <div class="mpl-preloader">
+            <div class="mpl-preloader-content">
+                <div class="mpl-preloader-title display-1 h1">5&Alive</div>
+                <div class="mpl-preloader-progress">
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        <div class="mpl-preloader-bg"></div>
+        <!-- /Preloader -->
+        <!-- Navbar -->
+        <nav class="mpl-navbar-top mpl-navbar">
+            <div class="mpl-navbar-mobile-overlay"></div>
+            <div class="container mpl-navbar-container">
+                <a href="#" class="mpl-navbar-toggle"></a>
+                <div class="mpl-navbar-brand">
+                    <a href="index.html">
+                        <img src="{{ url_for('static',filename='images/5logo.png') }}" alt="">
+                    </a>
+                </div>
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="#first">Quest</a></li>
+                        <li><a href="#second">Form</a></li>
+                        <li><a href="#third">Statistics</a></li>
+                        <li><a href="#fourth">About</a></li>
+                    </ul>
+                </nav>
+        </nav>
+    
+    <div class="plates">
+      <div class="row">
+        <div class='col-md-12'>
+            <section id="first">
+              <div id="unity-container" class="unity-desktop">
+                <canvas id="unity-canvas"></canvas>
+                <div id="unity-loading-bar">
+                  <div id="unity-logo"></div>
+                  <div id="unity-progress-bar-empty">
+                    <div id="unity-progress-bar-full"></div>
+                  </div>
+                </div>
+                <div id="unity-footer">
+                  <div id="unity-webgl-logo"></div>
+                  <div id="unity-fullscreen-button"></div>
+                  <div id="unity-build-title"><b>Song Credit:</b> Andrey Vinogradov</div>
+                </div>
+              </div>
+                <script>
+                  
+                  var buildUrl = "Build";
+                  var loaderUrl = buildUrl + "/shared.loader.js";
+                  var config = {
+                    dataUrl: buildUrl + "/shared.data.gz",
+                    frameworkUrl: buildUrl + "/shared.framework.js.gz",
+                    codeUrl: buildUrl + "/shared.wasm.gz",
+                    streamingAssetsUrl: "StreamingAssets",
+                    companyName: "test",
+                    productName: "Mario3D",
+                    productVersion: "0.1",
+                  };
+                
+                      var container = document.querySelector("#unity-container");
+                      var canvas = document.querySelector("#unity-canvas");
+                      var loadingBar = document.querySelector("#unity-loading-bar");
+                      var progressBarFull = document.querySelector("#unity-progress-bar-full");
+                      var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+                
+                      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+                        container.className = "unity-mobile";
+                        config.devicePixelRatio = 1;
+                      } else {
+                        canvas.style.width = "1000px";
+                        canvas.style.height = "650px";
+                      }
+                      loadingBar.style.display = "block";
+                
+                      var script = document.createElement("script");
+                      script.src = loaderUrl;
+                      script.onload = () => {
+                        createUnityInstance(canvas, config, (progress) => {
+                          progressBarFull.style.width = 100 * progress + "%";
+                        }).then((unityInstance) => {
+                          loadingBar.style.display = "none";
+                          fullscreenButton.onclick = () => {
+                            unityInstance.SetFullscreen(1);
+                          };
+                        }).catch((message) => {
+                          alert(message);
+                        });
+                      };
+                      document.body.appendChild(script);
+                </script>
+              </div>
+            </section> <!-- end of section .first -->
+          </div> <!-- end of div .col-md-9 -->
+        </div> <!-- end of div .row -->

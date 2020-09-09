@@ -14241,14 +14241,36 @@ body.compensate-for-scrollbar {
     position: relative;
   }
 
-  @media screen and (max-width: 768px) {
-    .row1 {
-      width: 100%;
-      height: 100%;
-      position: relative;
+  @media (orientation: landscape) and (max-width: 800px) {
+    #container-game {
+      width: 320px;
+      height:200px;
+      position: absolute;
     }
   }
-  
-  [id*="row1"] {
-    width: 100%;
-  }
+
+  @media (orientation: portrait) and (max-width: 500px) {
+    #question {
+        font-size: 15px;
+    }
+}
+@media (orientation: portrait) and (max-width: 1200px) {
+    .column {
+        transform: scaleY(.6);
+        display: block;
+        width: 49%;
+        margin-top: 0px;
+        padding-top: 0px;
+        position: relative;
+        margin-left: 2px;
+        top: 600px;
+    }
+    #fourth {
+        background-image: url('black_image.jpg') ; 
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}  
+
+
+
