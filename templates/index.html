@@ -45,9 +45,10 @@
         <!-- Preloader -->
         <script src="{{ url_for('static',filename='js/preloader.min.js') }}"></script>
         <script src= "{{ url_for('static',filename='js/shared.loader.js') }}"></script>
-        <script src= "{{ url_for('static',filename='js/shared.data.gz') }}"></script>
+        <!--<script src= "{{ url_for('static',filename='js/shared.data.gz') }}"></script>
         <script src= "{{ url_for('static',filename='js/shared.framework.js.gz') }}"></script>
         <script src= "{{ url_for('static',filename='js/shared.wasm.gz') }}"></script>
+        -->
     </head>
     <body>
         <!-- Preloader -->
@@ -128,7 +129,7 @@
                       loadingBar.style.display = "block";
                 
                       var script = document.createElement("script");
-                      script.src = loaderUrl;
+                      script.src = "{{ url_for('static',filename='js/shared.loader.js') }}";
                       script.onload = () => {
                         createUnityInstance(canvas, config, (progress) => {
                           progressBarFull.style.width = 100 * progress + "%";
