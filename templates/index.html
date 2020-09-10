@@ -105,11 +105,9 @@
                   -->
                   <br>
                   <div class="container-game">
-                    <iframe frameborder="0" src="https://itch.io/embed-upload/2701623?color=333333" allowfullscreen="" width="960" height="620"><a href="https://disguyranger.itch.io/5-and-alive">Play Team 5 and Alive on itch.io</a></iframe>                    <div id="unity-webgl-logo"></div>
-                    <div id="unity-fullscreen-button"></div>
-                    <div id="unity-build-title"><b>Song Credit:</b> Andrey Vinogradov
-                      <br>
-                    <b>Developer Credit:</b> Vishal</div>
+                    <iframe frameborder="0" src="https://itch.io/embed-upload/2703557?color=333333" allowfullscreen="" width="960" height="620"><a href="https://disguyranger.itch.io/5-and-alive">Play Team 5 and Alive on itch.io</a></iframe>                    <div id="unity-build-title"><b>Song Credit:</b> Andrey Vinogradov
+                  <br>
+                  <b>Developer Credit:</b> Vishal</div>
                     
                   </div>  
             </section> <!-- end of section .first -->
@@ -127,7 +125,8 @@
                       <div class="form-group">
                         <label id="question" for="inputSystem">1. What gaming system do you use most?</label>
                         <br>
-                        <select id="inputGaming" name="Gaming">
+                        <select id="inputGaming" name="Gaming" default="Select">
+                          <option value="" selected disabled hidden>Choose here</option>
                           <option value="Playstation">Playstation</option>
                           <option value="Xbox">Xbox</option>
                           <option value="GameCube">GameCube</option>
@@ -140,6 +139,7 @@
                         <label id="question" for="inputSystem">2. How many hours do you play per week?</label>
                         <br>
                         <select id="inputSystem" name="Hours">
+                          <option value="" selected disabled hidden>Choose here</option>
                           <option value="0-10">0-10</option>
                           <option value="11-15">11-15</option>
                           <option value="16-30">16-30</option>
@@ -152,6 +152,7 @@
                         </label>
                         <br>
                         <select id="inputJob" name="Job performance">
+                          <option value="" selected disabled hidden>Choose here</option>
                           <option value="Not at all">Not at all</option>
                           <option value="A little">A little</option>
                           <option value="A lot">A lot</option>
@@ -163,6 +164,7 @@
                         </label>
                         <br>
                         <select id="inputHelp" name="Help">
+                          <option value="" selected disabled hidden>Choose here</option>
                           <option value="Calm">Calm</option>
                           <option value="Excited">Excited</option>
                           <option value="Angry">Angry</option>
@@ -174,6 +176,7 @@
                         <label id="question" for="inputCommunity">5. How do you find the gaming community?</label>
                         <br>
                         <select id="inputCommunity" name="Community">
+                          <option value="" selected disabled hidden>Choose here</option>
                           <option value="Aggressive">Aggressive</option>
                           <option value="Fun">Fun</option>
                           <option value="Boring">Boring</option>
@@ -185,6 +188,7 @@
                         </label>
                         <br>
                         <select id="inputPlayers" name="Players">
+                          <option value="" selected disabled hidden>Choose here</option>
                           <option value="Friends">Friends</option>
                           <option value="Randoms">Randoms</option>
                           <option value="Family">Family</option>
@@ -196,6 +200,7 @@
                         </label>
                         <br>
                         <select id="inputRamifications" name="Ramifications">
+                          <option value="" selected disabled hidden>Choose here</option>
                           <option value="None at all">None at all</option>
                           <option value="Not very much">Not very much</option>
                           <option value="A little">A little</option>
@@ -208,6 +213,7 @@
                         </label>
                         <br>
                         <select id="inputSocialLife" name="Social Life">
+                          <option value="" selected disabled hidden>Choose here</option>
                           <option value="Never">Never</option>
                           <option value="Rarely">Rarely</option>
                           <option value="Sometimes">Sometimes</option>
@@ -220,6 +226,7 @@
                           </label>
                           <br>
                           <select id="inputSleep" name="Sleeping Habits">
+                            <option value="" selected disabled hidden>Choose here</option>
                             <option value="None at all">Never</option>
                             <option value="Not very much">Rarely</option>
                             <option value="A little">Sometimes</option>
@@ -232,6 +239,7 @@
                             </label>
                             <br>
                             <select id="inputThoughts" name="Thoughts">
+                              <option value="" selected disabled hidden>Choose here</option>
                               <option value="Stress relief">Stress relief</option>
                               <option value="Social skills">Social skills</option>
                               <option value="Hand eye coordination">Hand eye coordination</option>
@@ -241,6 +249,17 @@
                             </select>                      
                       </div>
                       <input id="submit" type="submit" value="submit" class="btn btn-primary">
+                      <p id="response_message"></p>
+                      <script form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                          event.preventDefault();
+                          event.stopPropagation();
+                          alert("failed");
+                          form.classList.add('was-validated');
+                        } else {
+                          alert("success");
+                        }
+                      }, false);></script>
                     </form>
                   </div>
                 </div>
@@ -313,6 +332,6 @@
         <!-- MonsterPlay -->
         <script src="{{ url_for('static',filename='js/monsterplay.min.js') }}"></script>
         <script src="{{ url_for('static',filename='js/monsterplay-init.js') }}"></script>
-        <!-- END: Scripts -->
+
     </body>
 </html>
