@@ -45,10 +45,10 @@
                 <!-- Preloader -->
         <script src="{{ url_for('static',filename='js/preloader.min.js') }}"></script>
         <script src= "{{ url_for('static',filename='js/shared.loader.js') }}"></script>
-        <!--<script src= "{{ url_for('static',filename='js/shared.data.gz') }}"></script>
-        <script src= "{{ url_for('static',filename='js/shared.framework.js.gz') }}"></script>
-        <script src= "{{ url_for('static',filename='js/shared.wasm.gz') }}"></script>
-        -->
+        <script src= "{{ url_for('static',filename='js/shared.data') }}"></script>
+        <script src= "{{ url_for('static',filename='js/shared.framework.js') }}"></script>
+        <script src= "{{ url_for('static',filename='js/shared.wasm') }}"></script>
+        
     </head>
     <body>
         <!-- Preloader -->
@@ -105,8 +105,15 @@
                   -->
                   <br>
                   <div class="container-game">
-                    <iframe src="https://i.simmer.io/@Disguy/~44222399-6dcb-c86e-12e4-c69175157b42" style="width:960px;height:600px"></iframe>
-                  </div>
+                    <iframe src="https://i.simmer.io/@Disguy/5-and-alive" style="width:960px;height:600px"></iframe>                  </div>
+                  <div id="unity-footer">
+                    <div id="unity-webgl-logo"></div>
+                    <div id="unity-fullscreen-button"></div>
+                    <div id="unity-build-title"><b>Song Credit:</b> Andrey Vinogradov
+                      <br>
+                    <b>Developer Credit:</b> Vishal</div>
+                    
+                  </div>  
             </section> <!-- end of section .first -->
           </div> <!-- end of div .col-md-9 -->
         </div> <!-- end of div .row -->
