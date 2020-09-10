@@ -68,7 +68,7 @@
             <div class="container mpl-navbar-container">
                 <a href="#" class="mpl-navbar-toggle"></a>
                 <div class="mpl-navbar-brand">
-                    <a href="index.html">
+                    <a href="/">
                         <img src="{{ url_for('static',filename='images/5logo.png') }}" alt="">
                     </a>
                 </div>
@@ -248,18 +248,9 @@
                               <option value="None of the above">None of the above</option>
                             </select>                      
                       </div>
-                      <input id="submit" type="submit" value="submit" class="btn btn-primary">
-                      <p id="response_message"></p>
-                      <script form.addEventListener('submit', function(event) {
-                        if (form.checkValidity() === false) {
-                          event.preventDefault();
-                          event.stopPropagation();
-                          alert("failed");
-                          form.classList.add('was-validated');
-                        } else {
-                          alert("success");
-                        }
-                      }, false);></script>
+                      <input id="submit" type="submit" value="submit" class="btn btn-primary" onclick="alert('Submitted!')">
+                      <p id="log"></p>
+
                     </form>
                   </div>
                 </div>
