@@ -14012,6 +14012,7 @@ body.compensate-for-scrollbar {
     background-size: cover, contain;
     background-repeat: no-repeat;
     color: #fff;
+    padding: 100px;
 }
 
  #first h1 {
@@ -14039,7 +14040,7 @@ body.compensate-for-scrollbar {
       width: 100%;
       height: 75%;
       position: relative;
-      padding: 150px;
+      padding: 100px;
     }
   }
 
@@ -14096,6 +14097,7 @@ body.compensate-for-scrollbar {
     height: 80vh;
     background-color: #06d6a0;
     scroll-snap-align: center;
+    padding:10px;
 }
 
  #fourth {
@@ -14315,11 +14317,6 @@ body.compensate-for-scrollbar {
     }
 }  
 
-.tableauPlaceholder {
-  position: absolute;
-  left: 15%;
-  margin-top: 90px;
-}
 
 @media (orientation: portrait) and (max-width: 700px) {
     .tableauPlaceholder {
