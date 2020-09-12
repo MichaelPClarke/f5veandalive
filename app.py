@@ -130,5 +130,33 @@ def surveydata():
 
     return survey_json
 
+@app.route("/highscore")
+def highscore():
+    conn = engine.connect()
+    query = '''
+        select Username, Score
+        From game.game
+        ORDER BY Score DESC
+        Limit 10;
+    '''
+    results_df = pd.read_sql(query, con=conn)
+    results_json = results_df.to_json(orient='records')
+    conn.close()
+    return results_json
+
+@app.route("/recentplayers")
+def recentplayers():
+    conn = engine.connect()
+    query = '''
+        select Username, Score
+        From game.game
+        ORDER BY Time DESC
+        Limit 10;
+    '''
+    results_df = pd.read_sql(query, con=conn)
+    results_json = results_df.to_json(orient='records')
+    conn.close()
+    return results_json    
+
 if __name__ == "__main__":
     app.run(debug=True)

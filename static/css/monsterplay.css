@@ -14035,6 +14035,15 @@ body.compensate-for-scrollbar {
 }
 
 @media screen and (min-width: 200px) {
+    #first {
+      width: 100%;
+      height: 75%;
+      position: relative;
+      padding: 150px;
+    }
+  }
+
+@media screen and (min-width: 200px) {
     #second {
       width: 100%;
       height: 60%;
@@ -14084,9 +14093,27 @@ body.compensate-for-scrollbar {
     justify-content: center;
     text-align: center;
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     background-color: #06d6a0;
     scroll-snap-align: center;
+}
+
+ #fourth {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(#6699ff,#6699ff,#6699ff, #ff6666);
+    scroll-snap-align: center;
+}
+
+.Top {
+    position: absolute;
+    left: 20px;
+    margin-top: -500px;
 }
 
  #third h1 {
@@ -14096,9 +14123,25 @@ body.compensate-for-scrollbar {
  #third p {
      font-size: 1.5rem;
  }
+ @media screen and (min-width: 200px) {
+    #third {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      font-size: 14px;
+    }
+  }
 
-
- #fourth {
+  @media screen and (min-width: 200px) {
+    #fourth {
+      width: 100%;
+      height: 75%;
+      position: relative;
+      font-size: 14px;
+      padding: 40px;
+    }
+  }
+ #fifth {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14113,11 +14156,11 @@ body.compensate-for-scrollbar {
     background-repeat: no-repeat;
 }
 
- #fourth h1 {
+ #fifth h1 {
     font-size: 4rem;
  }
 
- #fourth p {
+ #fifth p {
      font-size: 1.5rem;
  }
 
@@ -14265,15 +14308,25 @@ body.compensate-for-scrollbar {
         margin-left: 2px;
         top: 600px;
     }
-    #fourth {
+ #fifth {
         background-image: url('black_image.jpg') ; 
         background-size: cover;
         background-repeat: no-repeat;
     }
 }  
 
-.form-group {
-
+.tableauPlaceholder {
+  position: absolute;
+  left: 15%;
+  margin-top: 90px;
 }
 
+@media (orientation: portrait) and (max-width: 700px) {
+    .tableauPlaceholder {
+        transform: scaleY(.7);
+        display: inline-block;
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+}
 
