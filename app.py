@@ -53,7 +53,7 @@ def send():
             'Discovery': [Discovery],
             'Score' : [Score]
         })
-        print(game_df)
+        #print(game_df)
         game_df.to_sql('game', con=conn, if_exists='append', index=False)
 
         return redirect("/", code=302)
