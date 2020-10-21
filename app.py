@@ -9,19 +9,19 @@ from flask import (
     redirect)
     
 import pymysql
-#from flask_cors import CORS
+from flask_cors import CORS
 from config import remote_db_endpoint, remote_db_port
 from config import remote_db_name, remote_db_user, remote_db_pwd
 pymysql.install_as_MySQLdb()
 from sqlalchemy import func, create_engine
 
 app = Flask(__name__)
-# CORS(app)
-# cors = CORS(app, resources={
-#     r"/*": {
-#         "origins" : "*"
-#     }
-# })
+CORS(app)
+cors = CORS(app, resources={
+    r"/*": {
+        "origins" : "*"
+    }
+})
 engine = create_engine(f"mysql://{remote_db_user}:{remote_db_pwd}@{remote_db_endpoint}:{remote_db_port}/{remote_db_name}")
 
 # create route that renders index.html template
