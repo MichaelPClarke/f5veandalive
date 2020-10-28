@@ -155,8 +155,9 @@ def highscore():
 def recentplayers():
     conn = engine.connect()
     query = '''
-        select distinct Username, Score
+        select Username, Score
         From game
+        GROUP BY Username
         ORDER BY Time DESC
         Limit 10;
     '''
