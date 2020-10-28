@@ -70,13 +70,12 @@
                 <a href="#" class="mpl-navbar-toggle"></a>
                 <div class="mpl-navbar-brand">
                     <a href="/">
-                        <img src="{{ url_for('static',filename='images/5logo.png') }}" alt="">
+                        <img src="{{ url_for('static',filename='images/5logo.png') }}" alt="#">
                     </a>
                 </div>
                 <nav class="navigation">
                     <ul>
                         <li><a href="#first">Quest</a></li>
-                        <li><a href="#second">Form</a></li>
                         <li><a href="#third">Statistics</a></li>
                         <li><a href="#fourth">Top 10</a></li>
                         <li><a href="#fifth">About</a></li>
@@ -102,148 +101,6 @@
                 </section> <!-- end of section .first -->
             </div> <!-- end of div .col-md-9 -->
           </div> <!-- end of div .row -->
-            <section id="second">
-              <div class="container">
-                  <!--<a href="/" class="btn btn-primary" role="button">View Chart</a>-->
-                </div>
-                <div class="row">
-                  <div class="col-md-12">
-                    <div class="gaming"><img src="{{ url_for('static',filename='images/gamingtitle.png') }}" alt="title" width="600" height="100"></div>
-                    <form method="POST" action="/survey" role="form", name="survey">
-                      <div class="form-group">
-                        <label id="question" for="inputSystem">1. What gaming system do you use most?</label>
-                        <br>
-                        <select id="inputGaming" name="Gaming" default="Select">
-                          <option value="" selected disabled hidden>Choose here</option>
-                          <option value="Playstation">Playstation</option>
-                          <option value="Xbox">Xbox</option>
-                          <option value="GameCube">GameCube</option>
-                          <option value="PC">PC</option>
-                          <option value="Other">Other</option>
-                          <option value="NA">None of the above</option>
-                        </select>  
-                      </div>
-                      <div class="form-group">
-                        <label id="question" for="inputSystem">2. How many hours do you play per week?</label>
-                        <br>
-                        <select id="inputSystem" name="Hours">
-                          <option value="" selected disabled hidden>Choose here</option>
-                          <option value="0-10">0-10</option>
-                          <option value="11-15">11-15</option>
-                          <option value="16-30">16-30</option>
-                          <option value="30+">30+</option>
-                          <option value="NA">N/A</option>
-                        </select>  
-                      </div>
-                      <div class="form-group">
-                        <label id="question" for="inputJob">3. Has your playing of video games negatively affected your job attendance or punctuality?
-                        </label>
-                        <br>
-                        <select id="inputJob" name="Job performance">
-                          <option value="" selected disabled hidden>Choose here</option>
-                          <option value="Not at all">Not at all</option>
-                          <option value="A little">A little</option>
-                          <option value="A lot">A lot</option>
-                          <option value="NA">N/A</option>
-                        </select>  
-                      </div>
-                      <div class="form-group">
-                        <label id="question" for="inputHelp">4. How do you generally feel while playing video games?:
-                        </label>
-                        <br>
-                        <select id="inputHelp" name="Help">
-                          <option value="" selected disabled hidden>Choose here</option>
-                          <option value="Calm">Calm</option>
-                          <option value="Excited">Excited</option>
-                          <option value="Angry">Angry</option>
-                          <option value="Paranoid">Paranoid</option>
-                          <option value="None of the above">None of the above</option>
-                        </select>  
-                      </div>
-                      <div class="form-group">
-                        <label id="question" for="inputCommunity">5. How do you find the gaming community?</label>
-                        <br>
-                        <select id="inputCommunity" name="Community">
-                          <option value="" selected disabled hidden>Choose here</option>
-                          <option value="Aggressive">Aggressive</option>
-                          <option value="Fun">Fun</option>
-                          <option value="Boring">Boring</option>
-                          <option value="Other">Other</option>
-                        </select>  
-                      </div>
-                      <div class="form-group">
-                        <label id="question" for="inputPlayers">6. With whom do you play with most while online?
-                        </label>
-                        <br>
-                        <select id="inputPlayers" name="Players">
-                          <option value="" selected disabled hidden>Choose here</option>
-                          <option value="Friends">Friends</option>
-                          <option value="Randoms">Randoms</option>
-                          <option value="Family">Family</option>
-                          <option value="Alone">I don't play games with people, they're weird</option>
-                        </select>  
-                      </div>
-                      <div class="form-group">
-                        <label id="question" for="inputRamifications">7. Do you ever wonder about the ramifications of gaming? Do you think that they influence people to behave a certain way?
-                        </label>
-                        <br>
-                        <select id="inputRamifications" name="Ramifications">
-                          <option value="" selected disabled hidden>Choose here</option>
-                          <option value="None at all">None at all</option>
-                          <option value="Not very much">Not very much</option>
-                          <option value="A little">A little</option>
-                          <option value="Yes">Yes</option>
-                          <option value="No comment">No comment</option>
-                        </select>  
-                      </div>
-                      <div class="form-group">
-                        <label id="question" for="inputSocialLife">8. Does playing video games affect your social life?
-                        </label>
-                        <br>
-                        <select id="inputSocialLife" name="Social Life">
-                          <option value="" selected disabled hidden>Choose here</option>
-                          <option value="Never">Never</option>
-                          <option value="Rarely">Rarely</option>
-                          <option value="Sometimes">Sometimes</option>
-                          <option value="Usually">Usually</option>
-                          <option value="All the time">All the time</option>
-                        </select>  
-                      </div>    
-                      <div class="form-group">
-                          <label id="question" for="inputSleep">9. Has playing video games negatively affected your sleeping habits?
-                          </label>
-                          <br>
-                          <select id="inputSleep" name="Sleeping Habits">
-                            <option value="" selected disabled hidden>Choose here</option>
-                            <option value="None at all">Never</option>
-                            <option value="Not very much">Rarely</option>
-                            <option value="A little">Sometimes</option>
-                            <option value="Usually">Usually</option>
-                            <option value="All the time">All the time</option>
-                          </select>  
-                      </div>    
-                      <div class="form-group">
-                            <label id="question" for="inputThoughts">10. Playing video games gives me
-                            </label>
-                            <br>
-                            <select id="inputThoughts" name="Thoughts">
-                              <option value="" selected disabled hidden>Choose here</option>
-                              <option value="Stress relief">Stress relief</option>
-                              <option value="Social skills">Social skills</option>
-                              <option value="Hand eye coordination">Hand eye coordination</option>
-                              <option value="A place to escape">A place to escape</option>
-                              <option value="All of the above">All of the above</option>
-                              <option value="None of the above">None of the above</option>
-                            </select>                      
-                      </div>
-                      <input id="submit" type="submit" value="submit" class="btn btn-primary" onclick="alert('click')">
-                      <p id="log"></p>
-
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </section>
             <section id="third"> 
               <div class = "container">
                 <div class="row">
@@ -261,7 +118,7 @@
                   <div class="h-50 d-inline-block">
                   <h2>High Scores</h2>  
                   <div id="table-div" class="h-75">
-                    <table id="highscore-table" class="table table-striped table-inverse">
+                    <table id="highscore-table" class="table table-striped table-inverse" >
                       <thead>
                         <tr>
                           <th>Username</th>
@@ -276,8 +133,8 @@
                 </div>
                 <div class="col-md-6">
                   <h2>Most Recent Scores</h2>
-                  <div id="table-div">
-                    <table id="recentplayers-table" class="table table-striped table-inverse">
+                  <div id="table-div" >
+                    <table id="recentplayers-table" class="table table-striped table-inverse" >
                       <thead>
                         <tr>
                           <th>Username</th>
