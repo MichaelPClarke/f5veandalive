@@ -157,6 +157,7 @@ def recentplayers():
     query = '''
         select Username, Score
         From game
+        ORDER BY Username
         ORDER BY Time DESC
         Limit 10;
     '''
